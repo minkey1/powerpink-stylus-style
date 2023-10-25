@@ -1,0 +1,142 @@
+/* ==UserStyle==
+@name         Power Pink(edited Narkhotik's Cate 2.0)
+@namespace    USO Archive
+@author       Minkey(original by Narkhotik)
+@description  Use with addon <a href="https://addons.mozilla.org/de/firefox/addon/new-tab-override/">new tab override</a> to choose which site to open on every new tab (like www.google.com).  Allows you to change colors and background easily.  Don't hesitate to send a FeedBack.
+@version      20221129.23.25
+@license      CC-BY-NC-SA-4.0
+@preprocessor uso
+@advanced color MainColor "Main Color" #a400b0
+@advanced color AccentColor "Accent Color" #5a1080
+@advanced dropdown Background "Background" {
+    PowerPinkBackground "Power Pink*" <<<EOT https://i.imgur.com/emjaeIr.png EOT;
+    BlueCatBackground "Blue Cat" <<<EOT https://i.imgur.com/IKTDv3d.jpeg EOT;
+
+	Background-custom-dropdown "Custom" <<<EOT /*[[Background-custom]]*\/ EOT;
+}
+@advanced text Background-custom "Background (Custom)" "https://example.com/image.png"
+==/UserStyle== */
+@-moz-document regexp("https?://www.google.(com|([a-z]{2}))(.[a-z]{2})?."),
+regexp("https?://www.google.(com|([a-z]{2}))(.[a-z]{2})?/((\\?|webhp|search|gfe_rd|auth|gws_rd|#q|imghp|#gfe_rd|#safe|#pws|#tbs|#gws|#tbm).*)"),
+domain("google.co.jp") {
+	:root {
+		--MainColor: /*[[MainColor]]*/;
+		--AccentColor: /*[[AccentColor]]*/;
+	}
+	body {
+		background: url(/*[[Background]]*/) no-repeat fixed !important;
+		background-size: cover !important;
+	}
+	#hplogo,
+	.A1P7Ob {
+		display: none;
+	}
+	.RNNXgb,
+	.o6juZc {
+		border: none !important;
+		border-bottom: 1px solid var(--MainColor) !important;
+		background: rgba(0, 0, 0, 0.5) !important;
+		color: white !important;
+	}
+	.gLFyf {
+		color: white !important;
+	}
+	.s8GCU {
+		background-color: transparent !important;
+	}
+	#gb,
+	.c93Gbe,
+	.yg51vc,
+	.appbar,
+	.sfbg,
+	.f6F9Be,
+	#center_col,
+	.jZWadf,
+	.Lj9fsd,
+	.aajZCb {
+		background-color: rgba(0, 0, 0, .5) !important;
+		padding-right: 10px;
+	}
+	.gb_3 {
+		background-color: var(--AccentColor) !important;
+		background-image: none;
+		border-color: var(--AccentColor) !important;
+	}
+	.pHiOh,
+	.uU7dJb,
+	.gb_f,
+	.hdtb-msel,
+	.rQEFy,
+	.fbar p,
+	.fbar a,
+	.AaVjTc a:link,
+	.mJxzWe a,
+	.GyAeWb a,
+	.KwU3F,
+	.xSQxL,
+	.ynAwRc {
+		color: var(--MainColor) !important;
+	}
+	cite {
+		color: var(--AccentColor) !important;
+	}
+
+	.YTDezd {
+		background-color: var(--MainColor);
+	}
+	.rQEFy {
+		border-bottom: 3px solid var(--MainColor);
+	}
+	.Ww4FFb {
+		background-color: #0000006f;
+		border-radius: 20px;
+		padding-left: 5px;
+		overflow: hidden;
+
+		backdrop-filter: blur(10px);
+	}
+	.dG2XIf {
+		box-shadow: none;
+		background: #00000037;
+		border: 0px;
+		border-radius: 20px;
+		backdrop-filter: blur(10px);
+		/*padding: 10px;*/
+	}
+	span.GKhlo {
+		color: #a400b0;
+	}
+	.I6TXqe {
+		background: #0000009f;
+	}
+
+	.X6JNf:not(.NKrsie) {
+		background: #ffffff10;
+		backdrop-filter: blur(10px);
+		border-radius: 25px;
+	}
+
+	.PDtgPc,
+	.wfd7qb,
+	.iTvMDb,
+	.zOCrmb,
+	.qe1Dgc {
+		background: transparent;
+	}
+
+	.RDmXvc {
+		background-image: linear-gradient(transparent 0%, #00000050 35%, #000000af 100%);
+		left: 0px;
+	}
+	.zNsLfb {
+		width: 0%;
+	}
+
+
+	.wMcnBf.XNfAUb::before {
+		background: transparent;
+	}
+	.wMcnBf.XNfAUb::after {
+		background: transparent;
+	}
+}
